@@ -9,6 +9,9 @@ import { TimelineviewComponent } from './components/timelineview/timelineview.co
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { AgmCoreModule } from '@agm/core';
 import { DateAgoPipe } from './shared/pipes/date-ago.pipe';
+import { ChartsModule } from 'ng2-charts';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -23,6 +26,8 @@ import { DateAgoPipe } from './shared/pipes/date-ago.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ChartsModule,
+    FormsModule,
     AgmCoreModule.forRoot({
       // please get your own API key here:
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en

@@ -6,6 +6,11 @@ import { UibreportComponent } from './components/uibreport/uibreport.component';
 
 const routes: Routes = [
   {
+    path:'',
+    redirectTo:'report',
+    pathMatch:'full'
+  },
+  {
     path: 'map',
     component: MapviewComponent,
     data: {

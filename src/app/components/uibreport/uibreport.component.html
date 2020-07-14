@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card shadow">
     <div class="card-header" style="background: #ef4048;">
         <span style="color:#ffffff">ULB Report</span>
     </div>
@@ -10,10 +10,9 @@
             <div>
 
                 <div>
-                    <select class="selectpicker" style="width:60%;height:80%;">
-                        <option>Mustard</option>
-                        <option class="special">Ketchup</option>
-                        <option style="background: #5cb85c; color: #fff;">Relish</option>
+                    <select class="selectpicker" style="width:60%;height:80%;" name="agen" [(ngModel)]="agencyName" (change)="filterData()">
+                        <option [value]="undefined">Select Agency</option>
+                        <option *ngFor="let data of Agencies" [value]="data">{{data}}</option>
                     </select>
                 </div>
             </div>
@@ -23,10 +22,9 @@
             <div>
 
                 <div>
-                    <select class="selectpicker">
-                        <option>Mustard</option>
-                        <option class="special">Ketchup</option>
-                        <option style="background: #5cb85c; color: #fff;">Relish</option>
+                    <select class="selectpicker" style="width:60%;height:80%;" name="dist" [(ngModel)]="distName" (change)="filterData()">
+                        <option [value]="undefined">Select District</option>
+                        <option *ngFor="let data1 of Districts" [value]="data1">{{data1}}</option>
                     </select>
                 </div>
             </div>
@@ -36,10 +34,8 @@
             <div>
 
                 <div>
-                    <select class="selectpicker">
-                        <option>Mustard</option>
-                        <option class="special">Ketchup</option>
-                        <option style="background: #5cb85c; color: #fff;">Relish</option>
+                    <select class="selectpicker" style="width:60%;height:80%;" name="dist" [(ngModel)]="day">
+                       <option [value]="undefined" disabled>Today</option>
                     </select>
                 </div>
             </div>
@@ -56,19 +52,19 @@
                 <tr>
                     <th *ngFor="let column of displayedColumns" (click)="sortByCol(column)">{{column}}<i
                             class="fa fa-sort" aria-hidden="true"></i>
-                <tr class="text-center"><input style="text-align: center;" type="text"></tr>
-                </th>
-                <i class="fa fa-pencil" style="font-size: 20px;" aria-hidden="true"></i>
+                        <!-- <tr class="text-center"><input style="text-align: center;" type="text"></tr> -->
+                    </th>
 
                 </tr>
 
             </thead>
             <tbody>
-                <tr *ngFor="let element of records ">
-                    <td>{{element.position}}</td>
-                    <td>{{element.name}}</td>
-                    <td>{{element.weight}}</td>
-                    <td>{{element.symbol}}</td>
+                <tr *ngFor="let element of reportData ">
+                    <td>{{element.district}}</td>
+                    <td>{{element.Parcels}}</td>
+                    <td>{{element.Buildings}}</td>
+                    <td>{{element.Portions}}</td>
+                    <td>{{element.Agents}}</td>
                 </tr>
             </tbody>
         </table>
