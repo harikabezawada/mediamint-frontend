@@ -1,0 +1,53 @@
+
+<div class="container" style="margin-top: 3%;">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header" style="background: #bb454b;">
+                    <span style="color:#ffffff">REAL TIME ACTIVITY</span>
+                </div>
+                <div class="card-body">
+                   
+                   <table>
+                       <tr *ngFor="let data of realtimeData">
+                           <td><u>{{data.packId}}</u></td><td>created By</td><td><u style="color:#7e90cf;">{{data.createdBy}}({{data?.agencyName}})</u></td><td>({{data.createdDate|dateAgo}})</td>
+                       </tr>
+                   </table>
+                </div>
+                </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="background: #bb454b;">
+                    <span style="color:#ffffff">TIMELINE</span>
+                </div>
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <select>
+                            <option value="RDUS">RDUS</option>
+                            <option value="All Agencies">RDUS</option>
+                            <option value="Athentic PvtLtd">Athentic PvtLtd</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select>
+                            <option value="RDUS">Last 5Days</option>
+                            <option value="All Agencies">Last 7 Days</option>
+                            <option value="Athentic PvtLtd">Last 1 Day</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select>
+                            <option value="Parcels">Parcels</option>
+                            <option value="Building">Buildings</option>
+                            <option value="Portions">Portions</option>
+                        </select>
+                    </div>
+                </div>
+                </div>
+                </div>
+        </div>
+</div>
+
+</div>

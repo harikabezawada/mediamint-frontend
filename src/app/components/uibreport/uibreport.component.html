@@ -1,0 +1,76 @@
+<div class="card">
+    <div class="card-header" style="background: #ef4048;">
+        <span style="color:#ffffff">ULB Report</span>
+    </div>
+
+
+    <div class="row" style="margin-top:2%;">
+
+        <div class="col-sm-4 col-md-4">
+            <div>
+
+                <div>
+                    <select class="selectpicker" style="width:60%;height:80%;">
+                        <option>Mustard</option>
+                        <option class="special">Ketchup</option>
+                        <option style="background: #5cb85c; color: #fff;">Relish</option>
+                    </select>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div>
+
+                <div>
+                    <select class="selectpicker">
+                        <option>Mustard</option>
+                        <option class="special">Ketchup</option>
+                        <option style="background: #5cb85c; color: #fff;">Relish</option>
+                    </select>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div>
+
+                <div>
+                    <select class="selectpicker">
+                        <option>Mustard</option>
+                        <option class="special">Ketchup</option>
+                        <option style="background: #5cb85c; color: #fff;">Relish</option>
+                    </select>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+
+
+    </div>
+
+    <div class="row" style="margin-top:2%;">
+
+        <table class="table table-bordered ">
+            <thead>
+                <tr>
+                    <th *ngFor="let column of displayedColumns" (click)="sortByCol(column)">{{column}}<i
+                            class="fa fa-sort" aria-hidden="true"></i>
+                <tr class="text-center"><input style="text-align: center;" type="text"></tr>
+                </th>
+                <i class="fa fa-pencil" style="font-size: 20px;" aria-hidden="true"></i>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let element of records ">
+                    <td>{{element.position}}</td>
+                    <td>{{element.name}}</td>
+                    <td>{{element.weight}}</td>
+                    <td>{{element.symbol}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
